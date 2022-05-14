@@ -1,7 +1,7 @@
 //
 //  AppDelegate.swift
 //  Bankey
-//
+//O
 //  Created by Idris on 09/04/22.
 //
 
