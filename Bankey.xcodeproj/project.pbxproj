@@ -12,7 +12,9 @@
 		09182022280156C4003D9834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09182021280156C4003D9834 /* Assets.xcassets */; };
 		09182025280156C4003D9834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09182023280156C4003D9834 /* LaunchScreen.storyboard */; };
 		0918203028015D74003D9834 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0918202F28015D74003D9834 /* LoginView.swift */; };
+		0925D61F28327EAF0052C608 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925D61E28327EAF0052C608 /* DummyViewController.swift */; };
 		094A35892803107F00F9A10F /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A35882803107F00F9A10F /* OnboardingContainerViewController.swift */; };
+		097AD26228390D7E0010FFCF /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097AD26128390D7E0010FFCF /* LocalState.swift */; };
 		09D2BB25282FD652005E45F6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2BB24282FD652005E45F6 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +26,9 @@
 		09182024280156C4003D9834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09182026280156C4003D9834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0918202F28015D74003D9834 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0925D61E28327EAF0052C608 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		094A35882803107F00F9A10F /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		097AD26128390D7E0010FFCF /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		09D2BB24282FD652005E45F6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +62,7 @@
 		09182017280156C2003D9834 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				097AD25E28390D3E0010FFCF /* Utils */,
 				094A35872803104E00F9A10F /* Onboarding */,
 				0918202C28015C82003D9834 /* Files */,
 				0918202E28015D06003D9834 /* Login */,
@@ -81,6 +86,7 @@
 			children = (
 				0918201C280156C2003D9834 /* LoginViewController.swift */,
 				0918202F28015D74003D9834 /* LoginView.swift */,
+				0925D61E28327EAF0052C608 /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -92,6 +98,14 @@
 				09D2BB24282FD652005E45F6 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		097AD25E28390D3E0010FFCF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				097AD26128390D7E0010FFCF /* LocalState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0918203028015D74003D9834 /* LoginView.swift in Sources */,
+				097AD26228390D7E0010FFCF /* LocalState.swift in Sources */,
+				0925D61F28327EAF0052C608 /* DummyViewController.swift in Sources */,
 				0918201D280156C2003D9834 /* LoginViewController.swift in Sources */,
 				09D2BB25282FD652005E45F6 /* OnboardingViewController.swift in Sources */,
 				09182019280156C2003D9834 /* AppDelegate.swift in Sources */,

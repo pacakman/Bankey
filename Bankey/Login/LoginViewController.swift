@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject {
+	func didLogin()
+}
+
 class LoginViewController: UIViewController {
 	let loginView: LoginView = LoginView()
 	let signInButton: UIButton = UIButton(type: .system)
 	let errorMessageLabel: UILabel = UILabel()
 	let titleLabel: UILabel = UILabel()
 	let captionLabel: UILabel = UILabel()
+	
+	weak var delegate: LoginViewControllerDelegate?
 	
 	var username: String? {
 		return loginView.usernameTextField.text
@@ -62,6 +68,13 @@ extension LoginViewController {
 		
 	}
 	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		signInButton.configuration?.showsActivityIndicator = false
+		loginView.passwordTextField.text = nil
+		loginView.usernameTextField.text = nil
+	}
+	
 	@objc func signInButtonTapped() {
 		errorMessageLabel.isHidden = true
 		signInButton.configuration?.showsActivityIndicator = true
@@ -78,7 +91,7 @@ extension LoginViewController {
 			errorMessageLabel.text = "Username/password can not be blank"
 		}
 		else if username == "idris" && password == "welcome" {
-			
+			delegate?.didLogin()
 		}
 		else {
 			DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

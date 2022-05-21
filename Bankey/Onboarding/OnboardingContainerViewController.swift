@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol OnboardingContainerViewControllerDelegate: AnyObject {
+	func didFinishOnboarding()
+}
+
 class OnboardingContainerViewController: UIViewController {
 	
 	let pageViewController: UIPageViewController
@@ -14,6 +18,8 @@ class OnboardingContainerViewController: UIViewController {
 	var currentVC: UIViewController
 	let closeButton = UIButton(type: .system)
 	let nextButton = UIButton(type: .system)
+	
+	weak var delegate: OnboardingContainerViewControllerDelegate?
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
 		self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
@@ -73,7 +79,7 @@ class OnboardingContainerViewController: UIViewController {
 	}
 	
 	@objc private func closeButtonTapped() {
-		 
+		delegate?.didFinishOnboarding()
 	}
 }
 
